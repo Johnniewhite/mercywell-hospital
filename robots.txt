@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# Sitemaps
+Sitemap: https://www.mercywaymedicalcenter.com.ng/sitemap.xml 

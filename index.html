@@ -3,9 +3,89 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MERCYWAY-MEDICAL CENTRE</title>
-  <link rel="stylesheet" href="style.css">
+  
+  <!-- Primary Meta Tags -->
+  <title>MERCYWAY Medical Centre | Healthcare Services in Lagos</title>
+  <meta name="title" content="MERCYWAY Medical Centre | Healthcare Services in Lagos">
+  <meta name="description" content="MERCYWAY Medical Centre offers healthcare services, import and export of medical equipment, and general merchant services in Lagos. Available 24/7 for emergencies.">
+  <meta name="keywords" content="medical center Lagos, emergency services, diagnostic services, health checkup, surgical services, medical equipment import, medical equipment export">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mercywaymedicalcenter.com.ng/">
+  <meta property="og:title" content="MERCYWAY Medical Centre | Quality Healthcare in Lagos">
+  <meta property="og:description" content="Healthcare services, medical equipment import/export, and general merchant services. Available 24/7 for medical emergencies.">
+  <meta property="og:image" content="logo.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://www.mercywaymedicalcenter.com.ng/">
+  <meta property="twitter:title" content="MERCYWAY Medical Centre | Healthcare Services">
+  <meta property="twitter:description" content="Quality healthcare services and medical equipment solutions in Lagos.">
+  <meta property="twitter:image" content="logo.png">
+
+  <!-- Favicon -->
   <link rel="shortcut icon" href="mercywell-hospital/Screenshot 2023-10-16 at 11.21.57 AM.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Schema.org markup for Google -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "MERCYWAY Medical Centre",
+      "image": "logo.png",
+      "description": "Healthcare services, medical equipment import/export, and general merchant services in Lagos.",
+      "@id": "https://www.mercywaymedicalcenter.com.ng",
+      "url": "https://www.mercywaymedicalcenter.com.ng",
+      "telephone": "07046476233",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "4, James Omoboye street off Owonikoko street idimu Road, Mafon Bus Stop Ejigbo",
+        "addressLocality": "Lagos",
+        "addressCountry": "Nigeria"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 6.562180893431026,
+        "longitude": 3.2938518749932646
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "areaServed": "Lagos",
+      "additionalType": ["MedicalClinic", "MedicalSupplyStore"],
+      "medicalSpecialty": [
+        "Emergency Medicine",
+        "Diagnostic Imaging",
+        "General Medicine",
+        "Surgery"
+      ]
+    }
+  </script>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.mercywaymedicalcenter.com.ng">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </head>
 <body>
   <header>
@@ -17,7 +97,7 @@
         <a href="#">HOME</a>
         <a href="#about">ABOUT US</a>
         <a href="#service">SERVICES</a>
-        <a href="/appointments">APPOINTMENTS</a>
+        <a href="#" onclick="openAppointmentModal(); return false;">APPOINTMENTS</a>
         <a href="#contact">CONTACT US</a>
       </div>
       <button class="btn-mobile-nav">
@@ -31,7 +111,13 @@
     <div class="hero-details">
       <h1>Health and Medical Update</h1>
       <p>Health is a state of complete physical mental and social well-being and not merely the abscence of disease or infirmity...</p>
-      <button>LEARN MORE</button>
+      <div class="hero-buttons">
+        <button class="btn-primary">LEARN MORE</button>
+        <a href="tel:+2347046476233" class="btn-emergency">
+          <ion-icon name="alert-circle-outline"></ion-icon>
+          24/7 Emergency: Call Now
+        </a>
+      </div>
     </div>
   </section>
 
@@ -71,7 +157,7 @@
         <div class="img-div">
           <div class="hover">
           </div>
-          <img class="service-img" src="med6.png" alt="">
+          <img class="service-img" src="ambulance.jpg" alt="">
         </div>
         <div class="service-div">
           <span class="reason">For the better you</span>
@@ -84,7 +170,7 @@
       <li>
         <div class="img-div">
           <div class="hover"></div>
-          <img class="service-img" src="default.png" alt="">
+          <img class="service-img" src="checkup.jpg" alt="">
         </div>
         <div class="service-div">
           <span class="reason">For healthy body</span>
@@ -147,9 +233,8 @@
 
   <section id="contact" class="sec">
     <span class="desc cspan">Come and visit</span>
-    <h2 class="top-head">Get in <span>touch</span>
-    </h2>
-    <p> Come and visit our quarters or simply send us an email anytime you want. We are open to all suggestions from our audience.</p>
+    <h2 class="top-head">Get in <span>touch</span></h2>
+    <p>Come and visit our quarters or simply send us an email anytime you want. We are open to all suggestions from our audience.</p>
     <ul class="contact-grid">
       <li>
       <ion-icon name="location-outline"></ion-icon>
@@ -164,25 +249,82 @@
           <h3>CALL US</h3>
           <p>07046476233</p>
           <h3>WHATSAPP</h3>
-          <P>08102012241</P>
+          <p>08102012241</p>
        </div>
       </li>
       <li>
           <ion-icon name="mail-outline"></ion-icon>
           <div class="contact-details">
           <h3>WRITE TO US</h3>
-          <p>mercywaymedicalcenter@gmail.com mercywaymedicalventures@gmail.com </p>
+          <p>mercywaymedicalcenter@gmail.com mercywaymedicalventures@gmail.com</p>
        </div>
       </li>
       <li>
         <ion-icon name="calendar-outline"></ion-icon>
         <div class="contact-details">
           <h3>BOOK AN APPOINTMENT</h3>
-          <p>Click here to book an appointment at MERCYWAY Hospital</p>
+          <button onclick="openAppointmentModal()" class="appointment-btn">Book Your Appointment</button>
        </div>
       </li>
     </ul>
   </section>
+
+  <!-- Appointment Modal -->
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal" onclick="closeAppointmentModal()">&times;</span>
+      <h2>Book Your Appointment</h2>
+      <form id="appointmentForm" onsubmit="submitAppointment(event)">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Required:</label>
+          <select id="service" name="service" required>
+            <option value="">Select a service</option>
+            <option value="Emergency">Emergency Services</option>
+            <option value="Diagnostic">Diagnostic Services</option>
+            <option value="General">General Checkup</option>
+            <option value="Surgery">Surgical Services</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="preferred_date">Preferred Date:</label>
+          <input type="date" id="preferred_date" name="preferred_date" required>
+        </div>
+        <div class="form-group">
+          <label for="preferred_time">Preferred Time:</label>
+          <select id="preferred_time" name="preferred_time" required>
+            <option value="">Select time</option>
+            <option value="morning">Morning (9AM - 12PM)</option>
+            <option value="afternoon">Afternoon (12PM - 4PM)</option>
+            <option value="evening">Evening (4PM - 8PM)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Additional Notes:</label>
+          <textarea id="message" name="message" rows="3"></textarea>
+        </div>
+        <div class="form-buttons">
+          <button type="submit" class="submit-btn">Submit Appointment Request</button>
+          <a href="https://wa.me/2348102012241" target="_blank" class="whatsapp-btn">
+            <ion-icon name="logo-whatsapp"></ion-icon>
+            Book via WhatsApp
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <div id="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3963.6786885605616!2d3.2938518749932646!3d6.562180893431026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwMzMnNDMuOSJOIDPCsDE3JzQ3LjEiRQ!5e0!3m2!1sen!2sus!4v1697189503990!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">hi</iframe>
   </div>
